@@ -52,6 +52,7 @@ class AdminPanelProvider extends PanelProvider {
         ] )
         ->authMiddleware( [
             Authenticate::class,
+            'filament.admin',
         ] )
         ->plugin( FilamentSpatieRolesPermissionsPlugin::make() );
     }
